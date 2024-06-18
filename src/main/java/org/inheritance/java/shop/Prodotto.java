@@ -7,7 +7,7 @@ public class Prodotto {
 	private double price;
 	private double tax;
 	
-    public Prodotto(String name, String description, double price, int tax) {
+    public Prodotto(String name, String description, double price, double tax) {
     	//numero random compreso tra 1 e 999999
     	this.CODE = 1 + (int) (Math.random() * 999999);
     	this.name = name;
