@@ -1,2 +1,4 @@
 # java-inheritance-shop
- Esercitazione del 18-06
+ Creare la classe Prodotto che gestisce i prodotti dello shop. 
+ Applicando le proprietà di incapsulamento ed ereditarietà 
+
