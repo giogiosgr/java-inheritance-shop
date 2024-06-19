@@ -1,13 +1,13 @@
 package org.inheritance.java.shop;
 
-public class Prodotto {
+class Prodotto {
 	final private int CODE;
 	private String name;
 	private String description;
 	private double price;
 	private double tax;
 	
-    public Prodotto(String name, String description, double price, double tax) {
+    Prodotto(String name, String description, double price, double tax) {
     	//numero random compreso tra 1 e 99999999
     	this.CODE = 1 + (int) (Math.random() * 99999999);
     	this.name = name;
@@ -17,54 +17,54 @@ public class Prodotto {
     }
     	
 	//definizione vari getters e setters
-    public double getPrice() {
+    double getPrice() {
     	return this.price;	
     }
     
-    public void setPrice(double newPrice) {
+    void setPrice(double newPrice) {
     	this.price = newPrice;	
     }
     	
     //restituzione del prezzo come stringa, comprensivo di IVA, troncato a due decimali
-  	public String getFullPrice () {
+  	String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
   		return String.format("%.2f", temp); 
   	}
   	
-  	public String getFullName () {
+  	String getFullName () {
   		return CODE + "-" + name;
   	}
   	
-  	public String getName() {
+  	String getName() {
   		return this.name;
   	}
   	
-  	public void setName(String newName) {
+  	void setName(String newName) {
   		this.name = newName;
   	}
   	
-  	public String getDescription() {
+  	String getDescription() {
   		return this.description;
   	}
   	
-  	public void setDescription(String newDescription) {
+  	void setDescription(String newDescription) {
   		this.description = newDescription;
   	}
 
-	public double getTax () {
+	double getTax () {
 		return this.tax;
 	}
 
-	public void setTax (double newTax) {
+	void setTax (double newTax) {
 		this.tax = newTax;
 	}
   	
-    public int getCode() {
+    int getCode() {
     	return this.CODE;
     }
   	
     //conversione in stringa del codice, con padding di zeri a sinistra
-    static public String getPaddedCode(int code) {
+    static String getPaddedCode(int code) {
         return String.format("%08d", code);
     }
 }
