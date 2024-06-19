@@ -28,5 +28,17 @@ public class Main {
 		}
 
 		// creazione e utilizzo istanza della classe Cuffie
+		Cuffie headphones = new Cuffie("Phony", "Bassi potenti", 180.50, 15, "Viola", true);
+		System.out.println("\nCaratteristiche delle cuffie");
+		System.out.println("Nome completo delle cuffie: " + headphones.getFullName());
+		System.out.println("Prezzo completo delle cuffie: " + headphones.getFullPrice());
+		headphones.setColor("Blu");
+		System.out.println("Colore delle cuffie: " + headphones.getColor());
+		headphones.isWireless(false);
+		if (headphones.isWireless) {
+			System.out.println("Questo modello di cuffie è senza filo");
+		} else {
+			System.out.println("Questo modello di cuffie è con filo");
+		}
 	}
 }
