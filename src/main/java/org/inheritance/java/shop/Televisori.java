@@ -7,6 +7,7 @@ class Televisori extends Prodotto {
 	Televisori(String name, String description, double price, int tax, short inches, boolean isSmart) {
 		super(name, description, price, tax);
 		this.inches = inches;
+		this.isSmart = isSmart;
 	}
 
 	// getters e setters
