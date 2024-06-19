@@ -28,7 +28,7 @@ class Prodotto {
     //restituzione del prezzo come stringa, comprensivo di IVA, troncato a due decimali
   	String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
-  		return String.format("%.2f", temp); 
+  		return String.format("%.2f€", temp); 
   	}
   	
   	String getFullName () {
