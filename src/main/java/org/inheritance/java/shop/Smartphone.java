@@ -1,22 +1,23 @@
 package org.inheritance.java.shop;
 
 class Smartphone extends Prodotto {
-	//codice IMEI dichiarato come costante, mentre la memoria sarà modificabile
-    final private String IMEI;
+	// codice IMEI dichiarato come costante, mentre la memoria sarà modificabile
+	final private String IMEI;
 	private short memory;
 
 	Smartphone(String name, String description, double price, int tax, String IMEI, short memory) {
 		super(name, description, price, tax);
 		this.IMEI = IMEI;
+		// la memoria è espressa in numero di GB
 		this.memory = memory;
 	}
 
-    //getters e setters
-    String getIMEI() {
+	// getters e setters
+	String getIMEI() {
 		return this.IMEI;
 	}
 
-	short getMemory () {
+	short getMemory() {
 		return this.memory;
 	}
 
