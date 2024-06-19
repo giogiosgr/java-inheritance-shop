@@ -1,10 +1,10 @@
 package org.inheritance.java.shop;
 
-public class Televisori extends Prodotto {
+class Televisori extends Prodotto {
 	private short inches;
 	private boolean isSmart;
 
-	public Televisori(String name, String description, double price, int tax, short inches, boolean isSmart) {
+	Televisori(String name, String description, double price, int tax, short inches, boolean isSmart) {
 		super(name, description, price, tax);
 		this.inches = inches;
 	}
