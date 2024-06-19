@@ -14,15 +14,16 @@ public class Televisori extends Prodotto {
 		return this.inches;
 	}
 
-	boolean isSmart() {
-		return this.isSmart;
-	}
-
 	void setInches(short newInches) {
 		this.inches = newInches;
 	}
 
-	void setIsSmart(boolean smart) {
+	// il setter per isSmart è un overload del stesso metodo per fare get
+	boolean isSmart() {
+		return this.isSmart;
+	}
+
+	void isSmart(boolean smart) {
 		this.isSmart = smart;
 	}
 }
