@@ -1,10 +1,30 @@
 package org.inheritance.java.shop;
 
-public class Cuffie extends Prodotto{
+class Cuffie extends Prodotto {
+	String color;
+	boolean isWireless;
 
-	public Cuffie(String name, String description, double price, int tax) {
+	Cuffie(String name, String description, double price, int tax, String color, boolean isWireless) {
 		super(name, description, price, tax);
-		
+		this.color = color;
+		this.isWireless = isWireless;
 	}
 
+	// getters e setters
+	String getColor() {
+		return this.color;
+	}
+
+	void setColor(String newColor) {
+		this.color = newColor;
+	}
+
+	// il setter e il getter per isWireless formano un overload
+	boolean isWireless() {
+		return this.isWireless;
+	}
+
+	void isWireless(boolean wireless) {
+		this.isWireless = wireless;
+	}
 }
