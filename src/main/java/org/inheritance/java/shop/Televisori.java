@@ -18,7 +18,7 @@ public class Televisori extends Prodotto {
 		this.inches = newInches;
 	}
 
-	// il setter per isSmart è un overload del stesso metodo per fare get
+	// il setter per la proprietà isSmart è un overload del metodo getter
 	boolean isSmart() {
 		return this.isSmart;
 	}
