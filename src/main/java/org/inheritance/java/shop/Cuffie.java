@@ -19,11 +19,22 @@ class Cuffie extends Prodotto {
 		this.color = newColor;
 	}
 
-	// il setter e il getter per isWireless formano un overload
+	/**
+	 * Metodo in overload,
+	 * restituisce lo stato di isWireless
+	 * 
+	 * @return true/false di isWireless
+	 */
 	boolean isWireless() {
 		return this.isWireless;
 	}
 
+	/**
+	 * Metodo in overload,
+	 * setta lo stato di isWireless
+	 * 
+	 * @param wireless true/false di isWireless
+	 */
 	void isWireless(boolean wireless) {
 		this.isWireless = wireless;
 	}

@@ -19,11 +19,22 @@ class Televisori extends Prodotto {
 		this.inches = newInches;
 	}
 
-	// il setter e il getter per isSmart formano un overload
+	/**
+	 * Metodo in overload,
+	 * restituisce lo stato di isSmart
+	 * 
+	 * @return true/false di isSmart
+	 */
 	boolean isSmart() {
 		return this.isSmart;
 	}
-
+    
+	/**
+	 * Metodo in overload,
+	 * setta lo stato di isSMart
+	 * 
+	 * @param smart true/false di isSmart
+	 */
 	void isSmart(boolean smart) {
 		this.isSmart = smart;
 	}
