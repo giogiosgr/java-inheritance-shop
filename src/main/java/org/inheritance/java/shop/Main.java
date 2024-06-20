@@ -35,7 +35,7 @@ public class Main {
 		headphones.setColor("Blu");
 		System.out.println("Colore delle cuffie: " + headphones.getColor());
 		headphones.isWireless(false);
-		if (headphones.isWireless) {
+		if (headphones.isWireless()) {
 			System.out.println("Questo modello di cuffie è senza filo");
 		} else {
 			System.out.println("Questo modello di cuffie è con filo");
