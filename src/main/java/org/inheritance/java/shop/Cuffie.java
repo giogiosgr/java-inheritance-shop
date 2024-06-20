@@ -1,8 +1,8 @@
 package org.inheritance.java.shop;
 
 class Cuffie extends Prodotto {
-	String color;
-	boolean isWireless;
+	private String color;
+	private boolean isWireless;
 
 	Cuffie(String name, String description, double price, int tax, String color, boolean isWireless) {
 		super(name, description, price, tax);
