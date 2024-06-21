@@ -1,5 +1,8 @@
 package org.inheritance.java.shop;
 
+/**
+ * Classe per provare i metodi degli oggetti creati
+ */
 public class Main {
 
 	public static void main(String[] args) {
