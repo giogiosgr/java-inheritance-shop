@@ -7,9 +7,9 @@ class Carrello {
 	public static void main(String[] args) {
 		
         Scanner sc = new Scanner(System.in);
-        //array dei prodotti
+        // array dei prodotti
 	    Prodotto[] prodotti = new Prodotto[0];
-	    //variabili di appoggio per inizializzare le classi
+	    // variabili di appoggio per inizializzare le classi
 	    String product;
 	    String name;
 	    String description;
@@ -64,7 +64,7 @@ class Carrello {
                 	}
                 	prodotti = addProduct(prodotti, new Cuffie(name, description, price, tax, color, flag));
             }
-            System.out.println("\nVuoi inserire un altro prodotto?");      	
+            System.out.println("\nVuoi inserire un altro prodotto? (s/n)");      	
         } while (sc.next().toLowerCase().equals("s"));  	    
         
         sc.close();
