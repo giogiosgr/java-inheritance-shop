@@ -4,7 +4,7 @@ class Cuffie extends Prodotto {
 	private String color;
 	private boolean isWireless;
 
-	Cuffie(String name, String description, double price, int tax, String color, boolean isWireless) {
+	Cuffie(String name, String description, double price, double tax, String color, boolean isWireless) {
 		super(name, description, price, tax);
 		this.color = color;
 		this.isWireless = isWireless;

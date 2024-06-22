@@ -5,7 +5,7 @@ class Smartphone extends Prodotto {
 	final private String IMEI;
 	private short memory;
 
-	Smartphone(String name, String description, double price, int tax, short memory) {
+	Smartphone(String name, String description, double price, double tax, short memory) {
 		super(name, description, price, tax);
 		/**
 		 * L'IMEI è inizializzato richiamando la funzione dedicata
