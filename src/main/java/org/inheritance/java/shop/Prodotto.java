@@ -1,11 +1,11 @@
 package org.inheritance.java.shop;
 
 class Prodotto {
-	final private int CODE;
-	private String name;
-	private String description;
-	private double price;
-	private double tax;
+	final protected int CODE;
+	protected String name;
+	protected String description;
+	protected double price;
+	protected double tax;
 	
     Prodotto(String name, String description, double price, double tax) {
     	//numero random compreso tra 1 e 99999999
