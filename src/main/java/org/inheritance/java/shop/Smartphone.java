@@ -24,4 +24,10 @@ class Smartphone extends Prodotto {
 	void setMemory(short newMemory) {
 		this.memory = newMemory;
 	}
+	
+	@Override
+	public String toString() {
+		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nMEMORIA: %d GB"
+				, "Smartphone", this.name, this.description, getFullPrice(), this.memory);
+	}
 }
