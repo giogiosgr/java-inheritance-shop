@@ -48,6 +48,6 @@ class Televisori extends Prodotto {
 			type = "Televisore non smart";
 		}
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nPOLLICI: %d",
-				type, this.name, this.description, getFullPrice(), this.inches);
+				 type, this.name, this.description, getFullPrice(), this.inches);
 	}
 }

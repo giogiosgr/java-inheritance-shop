@@ -48,6 +48,6 @@ class Cuffie extends Prodotto {
 			type = "Cuffie con filo";
 		}
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nCOLORE: %s",
-				type, this.name, this.description, getFullPrice(), this.color);
+				 type, this.name, this.description, getFullPrice(), this.color);
 	}
 }

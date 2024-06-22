@@ -28,6 +28,6 @@ class Smartphone extends Prodotto {
 	@Override
 	public String toString() {
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nMEMORIA: %d GB",
-				"Smartphone", this.name, this.description, getFullPrice(), this.memory);
+				 "Smartphone", this.name, this.description, getFullPrice(), this.memory);
 	}
 }
