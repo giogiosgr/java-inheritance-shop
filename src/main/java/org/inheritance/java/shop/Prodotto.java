@@ -25,7 +25,11 @@ class Prodotto {
     	this.price = newPrice;	
     }
     	
-    //restituzione del prezzo come stringa, comprensivo di IVA, troncato a due decimali
+    /**
+     * Restituzione del prezzo come stringa, comprensivo di IVA, troncato a due decimali
+     * 
+     * @return
+     */
   	String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
   		return String.format("%.2f€", temp); 
@@ -67,5 +71,10 @@ class Prodotto {
     static String getPaddedCode(int code) {
         return String.format("%08d", code);
     }
+    
+    @Override
+	public String toString() {
+		return String.format("\nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s", this.name, this.description, getFullPrice());
+	}
 }
 
