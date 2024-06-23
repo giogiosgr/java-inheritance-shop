@@ -22,8 +22,9 @@ class Carrello {
 	    
 	    /**
 	     * Ciclo per lo scan delle varie proprietà e creazione degli oggetti di tipo Prodotto,
-	     * finisce quando l'utente sceglie di uscire, nell'input posto nella condizione del while,
-	     * L'unico controllo dell'input avviene nella scelta del tipo prodotto
+	     * finisce quando l'utente sceglie di uscire, nell'input posto nella condizione del while.
+	     * 
+	     * L'unico controllo della validità dell'input avviene nella scelta del tipo prodotto
 	     */
         do {
         	do {
@@ -81,7 +82,7 @@ class Carrello {
          * richiamando l'Override del metodo toString() dell'oggetto
          */
 	    for (int i = 0; i < prodotti.length; i++) {
-	    	System.out.printf("%d° prodotto del carrello: %s\n\n", i+1, prodotti[i].toString());
+	    	System.out.printf("%d° prodotto del carrello: %s \n\n", i+1, prodotti[i].toString());
     	}
 	}
 	
