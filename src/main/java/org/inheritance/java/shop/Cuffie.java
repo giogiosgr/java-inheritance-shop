@@ -4,18 +4,18 @@ class Cuffie extends Prodotto {
 	private String color;
 	private boolean isWireless;
 
-	Cuffie(String name, String description, double price, double tax, String color, boolean isWireless) {
+	public Cuffie(String name, String description, double price, double tax, String color, boolean isWireless) {
 		super(name, description, price, tax);
 		this.color = color;
 		this.isWireless = isWireless;
 	}
 
 	// getters e setters
-	String getColor() {
+	public String getColor() {
 		return this.color;
 	}
 
-	void setColor(String newColor) {
+	public void setColor(String newColor) {
 		this.color = newColor;
 	}
 
@@ -25,7 +25,7 @@ class Cuffie extends Prodotto {
 	 * 
 	 * @return true/false di isWireless
 	 */
-	boolean isWireless() {
+	public boolean isWireless() {
 		return this.isWireless;
 	}
 
@@ -35,7 +35,7 @@ class Cuffie extends Prodotto {
 	 * 
 	 * @param wireless true/false di isWireless
 	 */
-	void isWireless(boolean wireless) {
+	public void isWireless(boolean wireless) {
 		this.isWireless = wireless;
 	}
 	
@@ -48,6 +48,6 @@ class Cuffie extends Prodotto {
 			type = "Cuffie con filo";
 		}
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nCOLORE: %s",
-				 type, this.name, this.description, getFullPrice(), this.color);
+				 type, getName(), getDescription(), getFullPrice(), this.color);
 	}
 }

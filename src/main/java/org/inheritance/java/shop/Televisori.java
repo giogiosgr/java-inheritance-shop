@@ -4,18 +4,18 @@ class Televisori extends Prodotto {
 	private short inches;
 	private boolean isSmart;
 
-	Televisori(String name, String description, double price, double tax, short inches, boolean isSmart) {
+	public Televisori(String name, String description, double price, double tax, short inches, boolean isSmart) {
 		super(name, description, price, tax);
 		this.inches = inches;
 		this.isSmart = isSmart;
 	}
 
 	// getters e setters
-	short getInches() {
+	public short getInches() {
 		return this.inches;
 	}
 
-	void setInches(short newInches) {
+	public void setInches(short newInches) {
 		this.inches = newInches;
 	}
 
@@ -25,7 +25,7 @@ class Televisori extends Prodotto {
 	 * 
 	 * @return true/false di isSmart
 	 */
-	boolean isSmart() {
+	public boolean isSmart() {
 		return this.isSmart;
 	}
     
@@ -35,7 +35,7 @@ class Televisori extends Prodotto {
 	 * 
 	 * @param smart true/false di isSmart
 	 */
-	void isSmart(boolean smart) {
+	public void isSmart(boolean smart) {
 		this.isSmart = smart;
 	}
 	
@@ -48,6 +48,6 @@ class Televisori extends Prodotto {
 			type = "Televisore non smart";
 		}
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nPOLLICI: %d",
-				 type, this.name, this.description, getFullPrice(), this.inches);
+				 type, getName(), getDescription(), getFullPrice(), this.inches);
 	}
 }

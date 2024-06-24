@@ -2,12 +2,12 @@ package org.inheritance.java.shop;
 
 class Prodotto {
 	final protected int CODE;
-	protected String name;
-	protected String description;
-	protected double price;
-	protected double tax;
+	private String name;
+	private String description;
+	private double price;
+	private double tax;
 	
-    Prodotto(String name, String description, double price, double tax) {
+    public Prodotto(String name, String description, double price, double tax) {
     	// numero random compreso tra 1 e 99999999
     	this.CODE = 1 + (int) (Math.random() * 99999999);
     	this.name = name;
@@ -17,11 +17,11 @@ class Prodotto {
     }
     	
 	//definizione vari getters e setters
-    double getPrice() {
+    public double getPrice() {
     	return this.price;	
     }
     
-    void setPrice(double newPrice) {
+    public void setPrice(double newPrice) {
     	this.price = newPrice;	
     }
     	
@@ -30,40 +30,40 @@ class Prodotto {
      * 
      * @return String
      */
-  	String getFullPrice () {
+  	public String getFullPrice () {
   		double temp = this.price + (this.price * (this.tax / 100));
   		return String.format("%.2f€", temp); 
   	}
   	
-  	String getFullName () {
+  	public String getFullName () {
   		return CODE + "-" + name;
   	}
   	
-  	String getName() {
+  	public String getName() {
   		return this.name;
   	}
   	
-  	void setName(String newName) {
+  	public void setName(String newName) {
   		this.name = newName;
   	}
   	
-  	String getDescription() {
+  	public String getDescription() {
   		return this.description;
   	}
   	
-  	void setDescription(String newDescription) {
+  	public void setDescription(String newDescription) {
   		this.description = newDescription;
   	}
 
-	double getTax () {
+	public double getTax () {
 		return this.tax;
 	}
 
-	void setTax (double newTax) {
+	public void setTax (double newTax) {
 		this.tax = newTax;
 	}
   	
-    int getCode() {
+    public int getCode() {
     	return this.CODE;
     }
   	
@@ -73,7 +73,7 @@ class Prodotto {
      * @param code
      * @return String
      */
-    static String getPaddedCode(int code) {
+    public static String getPaddedCode(int code) {
         return String.format("%08d", code);
     }
 }

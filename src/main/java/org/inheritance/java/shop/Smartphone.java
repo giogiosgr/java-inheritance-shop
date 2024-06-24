@@ -5,7 +5,7 @@ class Smartphone extends Prodotto {
 	final private String IMEI;
 	private short memory;
 
-	Smartphone(String name, String description, double price, double tax, short memory) {
+	public Smartphone(String name, String description, double price, double tax, short memory) {
 		super(name, description, price, tax);
 		/**
 		 * L'IMEI è inizializzato richiamando la funzione dedicata
@@ -23,7 +23,7 @@ class Smartphone extends Prodotto {
 	 * 
 	 * @return
 	 */
-	String createIMEI() {
+	public String createIMEI() {
 		int part1;
 		int part2;
 		int part3;
@@ -36,21 +36,21 @@ class Smartphone extends Prodotto {
 	}
 
 	// getters e setters
-	String getIMEI() {
+	public String getIMEI() {
 		return this.IMEI;
 	}
 
-	short getMemory() {
+	public short getMemory() {
 		return this.memory;
 	}
 
-	void setMemory(short newMemory) {
+	public void setMemory(short newMemory) {
 		this.memory = newMemory;
 	}
 	
 	@Override
 	public String toString() {
 		return String.format("\nTIPO: %s \nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s \nMEMORIA: %d GB \nCODICE IMEI: %s",
-				 "Smartphone", this.name, this.description, getFullPrice(), this.memory, this.IMEI);
+				 "Smartphone", getName(), getDescription(), getFullPrice(), this.memory, this.IMEI);
 	}
 }
