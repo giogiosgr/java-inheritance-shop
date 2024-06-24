@@ -29,12 +29,12 @@ class Carrello {
         do {
         	do {
         		System.out.println("\nScegli il tipo di prodotto (smartphone, televisore, cuffie)");
-        	    product = sc.next().toLowerCase();
+        	    product = sc.nextLine().toLowerCase();
         	} while (!product.equals("smartphone") && !product.equals("televisore") && !product.equals("cuffie"));
             System.out.printf("\nInserire nome %s: \n", product);
-            name = sc.next();
+            name = sc.nextLine();
             System.out.printf("\nInserire descrizione %s: \n", product);
-            description = sc.next();
+            description = sc.nextLine();
             System.out.printf("\nInserire prezzo %s: \n", product);
             price = sc.nextDouble();
             switch (product) {
@@ -56,7 +56,7 @@ class Carrello {
                 	break;	
                 case "cuffie":
                 	System.out.println("\nInserire il colore delle cuffie");
-                	color = sc.next();
+                	color = sc.nextLine();
                 	System.out.println("\nScegliere se le cuffie sono Wireless (s/n)");
                 	if (sc.next().toLowerCase().equals("s")) {
                 		flag = true;
@@ -91,7 +91,7 @@ class Carrello {
 	 * 
 	 * @param oldProdotti array di istanze della classe Prodotto
 	 * @param newProdotto nuova istanza di prodotto
-	 * @return array di Prodotto con aggiunta la nuova istanza
+	 * @return Array di Prodotto con aggiunta la nuova istanza
 	 */
 	static Prodotto[] addProduct(Prodotto[] oldProdotti, Prodotto newProdotto) {
 		Prodotto[] newProdotti = new Prodotto[oldProdotti.length + 1];
