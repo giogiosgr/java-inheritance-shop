@@ -89,9 +89,9 @@ class Carrello {
 	/**
 	 * Metodo per aggiungere un nuovo prodotto, con restituzione di un nuovo array di lunghezza n+1
 	 * 
-	 * @param oldProdotti
-	 * @param newProdotto
-	 * @return
+	 * @param oldProdotti array di istanze della classe Prodotto
+	 * @param newProdotto nuova istanza di prodotto
+	 * @return array di Prodotto con aggiunta la nuova istanza
 	 */
 	static Prodotto[] addProduct(Prodotto[] oldProdotti, Prodotto newProdotto) {
 		Prodotto[] newProdotti = new Prodotto[oldProdotti.length + 1];
