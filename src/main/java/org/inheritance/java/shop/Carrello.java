@@ -18,6 +18,7 @@ class Carrello {
 	    Short memory;
 	    Short inches;
 	    String color;
+	    String answer;
 	    boolean flag;
 	    
 	    /**
@@ -37,17 +38,21 @@ class Carrello {
             description = sc.nextLine();
             System.out.printf("\nInserire prezzo %s: \n", product);
             price = sc.nextDouble();
+            sc.nextLine();
             switch (product) {
                 case "smartphone":
                 	System.out.println("\nInserire la memoria in GB dello smartphone");
                 	memory = sc.nextShort();
+                	sc.nextLine();
                 	prodotti = addProduct(prodotti, new Smartphone(name, description, price, tax, memory));
                 	break;
                 case "televisore":
                 	System.out.println("\nInserire la dimensione in pollici del televisore:");
                 	inches = sc.nextShort();
+                	sc.nextLine();
                 	System.out.println("\nScegliere se il televisore è Smart (s/n)");
-                	if (sc.next().toLowerCase().equals("s")) {
+                	answer = sc.nextLine();
+                	if (answer.toLowerCase().equals("s")) {
                 		flag = true;
                 	} else {
                 		flag = false;
@@ -58,15 +63,17 @@ class Carrello {
                 	System.out.println("\nInserire il colore delle cuffie");
                 	color = sc.nextLine();
                 	System.out.println("\nScegliere se le cuffie sono Wireless (s/n)");
-                	if (sc.next().toLowerCase().equals("s")) {
+                	answer = sc.nextLine();
+                	if (answer.toLowerCase().equals("s")) {
                 		flag = true;
                 	} else {
                 		flag = false;
                 	}
                 	prodotti = addProduct(prodotti, new Cuffie(name, description, price, tax, color, flag));
             }
-            System.out.println("\nVuoi inserire un altro prodotto? (s/n)");      	
-        } while (sc.next().toLowerCase().equals("s"));  	    
+            System.out.println("\nVuoi inserire un altro prodotto? (s/n)");  
+            answer = sc.nextLine();
+        } while (answer.toLowerCase().equals("s"));  	    
         
         sc.close();
 	
@@ -93,7 +100,7 @@ class Carrello {
 	 * @param newProdotto nuova istanza di prodotto
 	 * @return Array di Prodotto con aggiunta la nuova istanza
 	 */
-	static Prodotto[] addProduct(Prodotto[] oldProdotti, Prodotto newProdotto) {
+	public static Prodotto[] addProduct(Prodotto[] oldProdotti, Prodotto newProdotto) {
 		Prodotto[] newProdotti = new Prodotto[oldProdotti.length + 1];
 		for (int i = 0; i < newProdotti.length - 1; i++) {
 			newProdotti[i] = oldProdotti[i];
