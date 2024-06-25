@@ -10,7 +10,7 @@ class Carrello {
         // array dei prodotti
 	    Prodotto[] prodotti = new Prodotto[0];
 	    // variabili di appoggio per inizializzare le classi
-	    String product;
+	    String product = "";
 	    String name;
 	    String description;
 	    double price;
@@ -29,9 +29,19 @@ class Carrello {
 	     */
         do {
         	do {
-        		System.out.println("\nScegli il tipo di prodotto (smartphone, televisore, cuffie)");
-        	    product = sc.nextLine().toLowerCase();
-        	} while (!product.equals("smartphone") && !product.equals("televisore") && !product.equals("cuffie"));
+        		System.out.println("\nScegli il tipo di prodotto (1-smartphone, 2-televisore, 3-cuffie)");
+        	    switch (sc.nextInt()) {
+        	        case 1: 
+        	        	product = "Smartphone";
+        	        	break;
+        	        case 2:
+        	        	product = "Televisore";
+        	        	break;
+        	        case 3:
+        	        	product = "Cuffie";
+        	    }
+        	    sc.nextLine();
+        	} while (!product.equals("Smartphone") && !product.equals("Televisore") && !product.equals("Cuffie"));
             System.out.printf("\nInserire nome %s: \n", product);
             name = sc.nextLine();
             System.out.printf("\nInserire descrizione %s: \n", product);
@@ -40,13 +50,13 @@ class Carrello {
             price = sc.nextDouble();
             sc.nextLine();
             switch (product) {
-                case "smartphone":
+                case "Smartphone":
                 	System.out.println("\nInserire la memoria in GB dello smartphone");
                 	memory = sc.nextShort();
                 	sc.nextLine();
                 	prodotti = addProduct(prodotti, new Smartphone(name, description, price, tax, memory));
                 	break;
-                case "televisore":
+                case "Televisore":
                 	System.out.println("\nInserire la dimensione in pollici del televisore:");
                 	inches = sc.nextShort();
                 	sc.nextLine();
@@ -59,7 +69,7 @@ class Carrello {
                 	}
                 	prodotti = addProduct(prodotti, new Televisori(name, description, price, tax, inches, flag));
                 	break;	
-                case "cuffie":
+                case "Cuffie":
                 	System.out.println("\nInserire il colore delle cuffie");
                 	color = sc.nextLine();
                 	System.out.println("\nScegliere se le cuffie sono Wireless (s/n)");

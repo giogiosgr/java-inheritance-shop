@@ -76,5 +76,12 @@ class Prodotto {
     public static String getPaddedCode(int code) {
         return String.format("%08d", code);
     }
+    
+    @Override
+    public String toString() {
+		return String.format("\nNOME: %s \nDESCRIZIONE: %s \nPREZZO(comprensivo di iva): %s",
+				 this.name, this.description, getFullPrice());
+	}
+    
 }
 
