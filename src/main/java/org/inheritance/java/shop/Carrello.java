@@ -96,10 +96,10 @@ class Carrello {
         System.out.println("\n---- CARRELLO PRODOTTI ----\n");
         /**
          * Ciclo per la stampa dell'array dei prodotti, 
-         * richiamando l'Override del metodo toString() dell'oggetto
+         * richiamando implicitamente l'Override del metodo toString() dell'oggetto
          */
 	    for (int i = 0; i < prodotti.length; i++) {
-	    	System.out.printf("%d° prodotto del carrello: %s \n\n", i+1, prodotti[i].toString());
+	    	System.out.printf("%d° prodotto del carrello: %s \n\n", i+1, prodotti[i]);
     	}
 	}
 	
